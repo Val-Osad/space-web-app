@@ -23,8 +23,14 @@
         </div>
     </header>
     <h2>Login now</h2>
-    <input type="text" placeholder="login">
-    <input type="text" placeholder="password">
+    <div class="login__tooltip">
+        <input type="text" placeholder="username" name="username" x-moz-errormessage="Try Admin" required>
+        <span class="tooltip-text">Tooltip text</span>
+    </div>
+    <div class="login__tooltip">
+        <input type="password" name="password" minlength="5" placeholder="password"  x-moz-errormessage="Try 12345" required>
+        <span class="tooltip-text">Tooltip text</span>
+    </div>
     <button>Go</button>
 </body>
 </html>
