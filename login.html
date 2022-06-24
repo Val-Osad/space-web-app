@@ -23,14 +23,19 @@
         </div>
     </header>
     <h2>Login now</h2>
-    <div class="login__tooltip">
+    <div class="login__username">
+        <label for="username">User Name</label>
         <input type="text" placeholder="username" name="username" x-moz-errormessage="Try Admin" required>
-        <span class="tooltip-text">Tooltip text</span>
+        <div class="error"></div>
     </div>
-    <div class="login__tooltip">
+    <div class="login__password">
+        <label for="password">Password</label>
         <input type="password" name="password" minlength="5" placeholder="password"  x-moz-errormessage="Try 12345" required>
-        <span class="tooltip-text">Tooltip text</span>
+        <div class="error"></div>
     </div>
-    <button>Go</button>
+    <form action="">
+        <button id="submit-btn" type="submit">Go</button>
+    </form>
+
 </body>
 </html>
