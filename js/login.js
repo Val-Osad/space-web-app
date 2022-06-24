@@ -1,17 +1,18 @@
 (function () {
-    const error = document.querySelector(".error");
-    const userName = document.querySelector(".login__username-input");
-    const password = document.querySelector(".login__password-input");
+    const error = document.querySelectorAll(".error");
+    const userName = document.querySelector("#login__username-input");
+    const password = document.querySelector("#login__password-input");
     const submitBtn = document.querySelector("#submit-btn");
-    
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-    });
 
-    //form validation thing
-    //serial: success of failure
-    //message is what to print inside error class
-    let engine = (id, serial, message) => {
-
+    function validate() {
+        if(userName.value !== "Admin") {
+            error.innerHTML = "Try Admin for username";
+        } if (password.value !== "12345") {
+            error.innerHTML = "Try 12345 for password";
+        } else {
+            error.innerHTML = "Good job!";
+        }
     }
+
+    validate(); // не працює
 })();
